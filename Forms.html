@@ -5,26 +5,30 @@
     <title>Form</title>
   </head>
   <body>
+
+  <div style="background-image: url(https://wallpapercave.com/wp/12oNQS9.jpg);">
   	<h1>Registration form </h1>
 
-  	<form action="/pagename" method = "post">
+  	<form action="/pagename" method = "post" autocomplete>
 
 
   		<pre> 
   		<label>Name</label>
-  		<input type = "text" name = "firstName" value = " ">
+  		<input type = "text" name = "firstName" value = "Sanjay " readonly size="4"disabled>
   		
   		<label>Mobile no</label>
-  		<input type = "number" name = "mobile no" >
+  		<input type = "number" name = "mobile no" placeholder="Enter mobile number"  autofocus  max="10" >
 
   		<label>Email</label>
-  		<input type = "Email" name = "Email" >
+  		<input type = "Email" name = "Email" placeholder="valid email id" autocomplete  required>
   		<label>Password</label>
-  		<input type = "password" name = "password" >
+  		<input type = "password" name = "password " placeholder="Enter 6 digit password" maxlength="6" minlength="4" pattern="[a-zA-Z^
+
+      0-9]{6}">
 
 
   		<label>Date</label>
-  		<input type = "Date" name = "date" >
+  		<input type = "Date" name = "date" hidden>
 
   		<label>Time</label>
   		<input type = "Time" name = "Time" >
@@ -39,14 +43,15 @@
   		<label>Hobbies</label>
   		<input type = "checkbox" name = "Hobbies" value = "Bike riding" >Bike Riding
   		<input type = "checkbox" name = "Hobbies" value = "Movies" >Watching Movies
-  		<input type = "checkbox" name = "Hobbies" value = "Cricket" >Playing Cricket
+  		<input type = "checkbox" name = "Hobbies" value = "Cricket" checked >Playing Cricket
 
   		<label>Country</label>
-  		<select>
+  		<select name="Select country">
+        <option>Select Country</option>
   		 	<option value = "India">India</option>
   		 	<option>China</option>
   		 	<option>UK</option>
-  		 	<option>USA</option>
+  		 	<option value="USA" selected="">USA</option>
   		 </select>
 
   		<label>Image</label>
@@ -61,7 +66,13 @@
 
   		</pre>
   	</form>
-    
+
+
+
+  
+
+  
+    </div>
   </body>
 </html>
 
