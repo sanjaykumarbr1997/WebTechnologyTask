@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <script>
+        //in array =[], in objexts ={}
+
+        var car = {carName:"Volvo",carModel:"XC60",carColor:"Blue",carPrice:10000000,
+        carAC:true, fullName: function(){
+            return this.carName + " "+this.carModel+" "+this.carColor+" "+this.carPrice
+        }
+    
+    };
+        document.write(car.carModel+" "+car.carName);
+        document.write("<br>"+car.carModel);
+
+        var fullName = car.fullName();
+
+        document.write("<br>"+fullName);
+//second way of creating object
+        var musicPlayer = new Object();
+        musicPlayer.brand = "Sony";
+        musicPlayer.color = "Black";
+        musicPlayer.price= 5000;
+        musicPlayer.running = function(m){
+            document.write("<br>"+"AC running using:"+m);
+        }
+        document.write("<br>"+musicPlayer.brand+" "+musicPlayer.color+" "+musicPlayer.price);
+        musicPlayer.running("Electricity");
+//function as constructor
+        function person(name,dob,age,address){
+            this.name = name;
+            this.dob = dob;
+            this.age = age;
+            this.address=address;
+        };
+
+        var personObj = new person("Ram","4 Jun 2021","20","Bengalure");
+        document.write("<br>"+personObj.name);
+       
+        document.write("<br>"+personObj.address);
+        //to add new property to existing object
+
+        person.prototype.education ="BE";
+        document.write("<br>"+personObj.education);
+
+        person.prototype.changeAge=function(newAge){
+            document.write(personObj.age=newAge);
+        }
+        document.write("<br>");
+        personObj.changeAge(22);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class</title>
+</head>
+<body>
+
+    <h1>Js Class</h1>
+    <script>
+        // !!!!!one restriction here , only one constructor can be used not multiple 
+        class Animal{
+            constructor(name,breed,color,type){
+                this.name = name;
+                this.breed = breed;
+                this.color = color;
+                this.type = type;
+
+            }
+            //without using function keyword
+            eating(food){
+                document.write(this.name+" is eating "+food);
+            }
+
+        
+
+        }
+        var dog = new Animal("Bruno","german shepard","domestic");
+        document.write(dog.name+" "+dog.breed);
+        document.write("<br>");
+        dog.eating("chicken");
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Number</title>
+</head>
+<body>
+    <h1>String-Number</h1>
+    <script>
+        var lang= "Js";//literals
+        var lango = new String();  //new
+
+        //string methods
+        var str = "javascript string and number methods";
+        console.log(str.length);
+        console.log(str.concat(" uses "));
+        console.log(str.indexOf("string"));
+        console.log(str.lastIndexOf("string"));
+        console.log(str.search("string"));
+        console.log(str.slice(11,20));
+        console.log(str.substr(11,6));
+        console.log(str.replace("javascript","JS"));
+        console.log(str);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+        var name = "    sanjay   ";
+        console.log(name.trim());
+        console.log(name.charAt(8));
+        console.log(name.charCodeAt(8)); //ascii
+
+        //Number
+        var n =5;
+        var num = new Number(86.653); 
+
+        console.log(num.toFixed(3));
+        
+        console.log(typeof ("10.56"));
+        console.log(typeof Number("10.56"));
+        console.log(parseInt("5"));
+        console.log(typeof parseFloat("6.23"));
+        //NAN not a number
+
+        var b="6";
+        var c = "bc";
+
+        console.log(b*c);
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        console.log(Number.POSITIVE_INFINITY);
+
+        //type conversion 
+        console.log(Number(true));
+
+        //function
+        function add(a,b){
+            return a+b;
+
+        }
+        var res = add(4,8);
+        console.log(res);
+
+        //Array
+        var array = ["concat","indexOf","search","replace"];
+        var array2 = new Array("Number","parseInt","parseFlot");
+        console.log(array[0]);
+        console.log(array[1]);
+
+        console.log(array);
+
+        for(var i=0;i<array.length;i++) {
+            console.log(array[i]);
+        }
+
+        console.log(array.length);
+
+        console.log(array.toString());
+        console.log(array.join("-"));
+        //in js array is mutable
+
+        console.log(array.push("charAt")); //element at last
+        console.log(array);
+        console.log(array.unshift("charcodeat"));//element at first
+        console.log(array);
+        console.log(array.shift("charcodeat"));//removes first element
+        console.log(array);
+        console.log(array.pop());//removes last element
+        console.log(array);
+        console.log(array.slice(0,2));// it cuts but doesnt effect original table
+
+        var newArray = array.slice(0,2);
+        console.log(newArray);
+
+        console.log(array.splice(0,2));//it cuts and affects original array
+        console.log(newArray)
+        console.log(array.concat(newArray));
+
+        console.log(array2);
+        console.log(array2.sort());
+
+        var student =["Surya",20,"1st ",true];
+        console.log(student);
+
+
+    </script>
+    
+</body>
+</html>

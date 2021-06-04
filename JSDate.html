@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+
+    <h1>Date Object </h1>
+    <script>
+        var today= new Date();
+        document.write(today);
+
+         //parameters that are passed to create custom date
+        //y,mo,d,h,mi,s,ms
+         var owndate = new Date(1998,6,4,10,50,40);
+         document.write("<br>" +owndate);
+
+         var currentMilli = Date.now();//generate millisec upto now
+         document.write("<br>" +currentMilli);
+
+         var Datemillisec = new Date(currentMilli); //milisec
+         document.write("<br>" + Datemillisec);
+
+         document.write("<br> Date " +today.getDate());
+         document.write("<br> Month " +today.getMonth());//0-11
+         document.write("<br> Year " +today.getFullYear());
+        //getTime() -millisec
+         document.write("<br> Hours " +today.getHours()+" "+today.getMinutes()+" "+today.getSeconds()+" "+today.getMilliseconds());
+         
+         document.write("<br> Date " +owndate.setDate(7));
+         document.write("<br> Date " +owndate.getDate());
+         document.write("<br> Month " +today.setMonth(5));//0-11
+         document.write("<br> Year " +today.setFullYear(2015));
+        
+        
+        
+         var millisec = new Date(); //millisec from 1970
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS variables</title>
+</head>
+<body>
+
+    <h1>JS Variables</h1>
+
+    <script>
+
+        //global variable
+        //var can be accesed anywhere inside block outside block
+        var city = "bangalore";
+        var age = 20;
+        var price = 50.36;
+        var moible= 999999999;
+        var citizenOfIndia = true;
+
+        let name ="Arya";
+
+        {//local variables  , we use let 
+            let qualification ="BE";
+            console.log(qualification);
+            let city = "Karvar";
+            console.log(city);
+            
+            console.log(name);
+        }
+
+        qualification= "BSC"; //fishy  
+           console.log(qualification); // - you can use as qualification is local
+            console.log(city);
+
+
+        //constant variable
+        const institue = "Xworkz ";
+        //u cannot assign or change value of variable
+        console.log(institue);
+
+        //institue="ODC";
+        //console.log(institute);
+
+        //operators
+        var a=5;
+
+        var b=6;
+        var c=a+b;  // + - * /
+        var d="7";
+        var e = a+d;
+        var f =8;
+        var g =6, h=8;
+        f="v";
+        console.log(c);
+        console.log(e);
+
+        console.log(a>b); // <,>,<=,>=,!=
+        a=6;
+        console.log(a==b);
+        console.log(a===c);
+        //3 equals , compare value and type of value 
+        console.log(typeof f);
+
+        var i;
+        console.log(i);
+        //no default value in java, it is undefined in js
+
+        var e=10, f=10;
+        if(e===f){
+            alert("E and F are same value and same type");
+
+        }
+        else{
+            alert("E and F are not same value and not same type")
+        }
+
+        //alert is similar to window.alert but window is global and alert is local
+
+        for(var i=0;i<5;i++){
+            console.log(i);
+        }
+
+        //Math
+        var minimum =Math.min(2,6);
+        console.log(minimum);
+
+        var maximum =Math.max(2,6);
+        console.log(maximum);
+
+        var sqrt = Math.sqrt(8);
+        console.log(sqrt);
+
+        console.log(Math.PI);
+        console.log(Math.E);
+        console.log(Math.LOG2E);
+
+        console.log(Math.sin(5));
+        //Math.cos(5);
+        console.log(Math.pow(5,3));
+
+        console.log(Math.random()*100);
+
+
+
+    </script>
+    
+</body>
+</html>

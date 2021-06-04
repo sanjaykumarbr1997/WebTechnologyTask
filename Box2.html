@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Document</title>
+   
+    <style type="text/css">
+
+    
+h1{
+            color: black;
+            background-color: darkcyan;
+            position: sticky;
+            top: 0; 
+
+        }
+
+    #parag{
+    background-color: rgba(30, 156, 114, 0.336);
+    color: black;
+    padding: 40px 65px 62px 50px;
+    border: 10px solid paleturquoise;
+    outline : 5px solid black;
+    margin: 50px 50px 50px 0px;
+    
+
+    }
+
+    
+
+    span{
+            display: block;
+            float: left;
+        }
+
+     li{
+            font-size: larger;
+            display: inline;
+            background-color: rgba(223, 226, 24, 0.637);
+            
+            
+        }  
+
+        img{
+            display: block;
+            float: right;
+            overflow: auto;
+            opacity: 0.8;
+
+        }
+
+        table{
+        border: 6px solid black;
+        border-collapse: collapse;    
+
+        }
+
+        tr,td{
+            border: 3px solid black;
+            
+           
+        }
+
+        th{
+            border: 4px inset black;
+        }
+
+      div{
+      
+      padding: 40px 65px 62px 50px;
+    
+        height: 400px;
+        width: 500px;
+        overflow: scroll;
+
+    }
+
+    
+
+
+    body {
+    background-image: url("https://wallpapercave.com/wp/wp2742433.jpg") ;
+    
+    
+    }
+    </style>
+
+
+
+
+
+</head>
+<body style ="background-color: black;">
+
+    <h1 >ABOUT CSS </h1>
+    
+    <p> <img src="data:image/png;base64,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" ></p>
+   
+
+    
+    <ul>
+        <li> <a href="https://www.w3.org/TR/REC-CSS1/"> CSS 1</a></li>
+        <li> <a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/"> CSS 2</a></li>
+        <li> <a href ="https://www.w3.org/Style/CSS/specs.en.html">CSS 3</a></li>
+        
+
+    </ul>
+
+    <p style="color:black;">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.<span> separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</span>
+        Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.[
+        The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+        The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
+        In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG,
+    
+    </p>
+
+
+    <p id= "parag">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+        Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.[
+        The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+        The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
+        In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG,
+    
+    </p>
+
+    
+ <div>
+    <table  > 
+        <caption><b>CSS priority scheme(highest to lowest)</b></caption>
+        <tr> 
+            <th> Priority</th>
+            <th> CSS Source type </th> 
+            <th>Description</th>
+            
+
+        </tr>
+
+        <tr> 
+            <td> 1 </td>
+            <td> Importance</td>  
+            <td>The "!important" annotation overwrites the previous priority types </td>
+            
+
+        </tr>
+        <tr> 
+            <td> 2 </td>
+            <td> Inline</td>  
+            <td> A style applied to an HTML element via HTML "style" attribute </td>
+            
+
+        </tr>
+        <tr> 
+            <td> 3 </td>
+            <td> Media Type</td>  
+            <td> A property definition applies to all media types, unless a media specific CSS is defined</td>
+            
+
+        </tr>
+        <tr> 
+            <td> 4 </td>
+            <td> User defined</td>  
+            <td> Most browsers have the accessibility feature: a user defined CSS</td>
+            
+
+        </tr>
+        <tr> 
+            <td> 5 </td>
+            <td> Selector Specifity </td>  
+            <td> A specific contextual selector (#heading p) overwrites generic definition</td>
+            
+
+        </tr>
+        <tr> 
+            <td> 6 </td>
+            <td> Rule Order</td>  
+            <td> Last rule declaration has a higher priority </td>
+            
+
+        </tr>
+        <tr> 
+            <td> 7 </td>
+            <td>Parent inheritance</td>  
+            <td>If a property is not specified, it is inherited from a parent element </td>
+            
+
+        </tr>
+        <tr> 
+            <td> 8 </td>
+            <td>CSS property definition in HTML document</td>  
+            <td> CSS rule or CSS inline style overwrites a default browser value</td>
+            
+
+        </tr>
+        <tr> 
+            <td> 9 </td>
+            <td> Browser default </td>  
+            <td> The lowest priority: browser default value is determined by W3C initial value specifications </td>
+            
+
+        </tr>
+
+
+        </table>
+
+    </div>
+
+    
+    
+</body>
+</html>

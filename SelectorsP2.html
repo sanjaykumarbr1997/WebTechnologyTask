@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Combinator selectors</title>
+
+    <style type="text/css">
+        /*div p{ 
+            color: red;
+            background-color: blue;
+         } 
+        div > p{ 
+
+        color: red;
+        background-color: blue;
+        }
+        div + p{ 
+        color: red;
+        background-color: blue;
+        }
+         */
+
+        div ~ p{ 
+
+        color: red;
+        background-color: blue;
+        }
+        a:link{
+            color: green;
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:hover{
+            color: pink;
+        }
+        a:active{
+            color: red;
+        }
+
+        input:focus{
+            color: royalblue;
+            background-color: salmon;
+        }
+
+        input:disabled{
+            background-color: slategray;
+        }
+
+        input:enabled{
+            background-color: teal;
+        }
+
+        input:required{
+            background-color: yellowgreen;
+        }
+
+        input:checked{
+            width: 50px;
+            height: 60px;
+        }
+        p:hover{
+            background-color: tomato;
+        }
+
+        div:first-child{
+            text-transform: uppercase;
+        }
+        
+        div:last-child{
+            text-transform: lowercase;
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    
+<div>
+
+    <!-- Here 3 p tag and h1 tag are direct child of div tag
+        and one p with span is indirect -->
+    <p>Combinator Selector</p>
+    <p>Combinator Selector</p>
+
+    <p>Combinator Selector</p>
+    <p>Combinator Selector</p>
+    <p>Combinator Selector</p>
+    <section><p>Combinator Selector</p> </section>
+    
+
+</div>
+
+<div>
+    <p>adjacent tag</p>
+    <p>sibling</p>
+    <p>sibling</p>
+    <p>sibling</p>
+    
+</div>
+    
+    <h1 > <a href="https://www.youtube.com/">Youtube Link </a>  </h1>
+
+    <form>
+        <pre>
+        <label >Name</label>
+        <input type="text" name ="name" disabled>
+
+        <label >Number</label>
+        <input type="number" name ="number" required>
+
+        <label >Male</label>
+        <input type="radio" name ="radio">
+
+        <label >FeMale</label>
+        <input type="radio" name ="radio" checked>
+
+        <input type="submit" name= "submit">
+
+    </pre>
+    </form>
+</body>
+</html>
