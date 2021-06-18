@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="callonload()" onresize="callonresize()">
+
+    <button  id="but1" style = "background-color:blue" onclick="buttonclick()">Click here</button>
+    <button  id="but2"  onmousedown="buttonmousedown()" onmouseup="buttonmouseup()" >here</button>
+    <input id ="p1" onkeydown="p1keydown()"  onkeyup="p1keyup()"type="text">
+
+<h2 id="msg"></h2> 
+<h2>Sign Up</h2>
+<form onsubmit="signupSubmit()">
+<label >Name</label>
+<label id ="validateName">id</label>
+<input id="name" onfocus = "nameonfocus()" onblur = "nameonblur()" type="text" 
+name = "name" required="">
+<label >country</label>
+<select id = "country" onchange="selectonchange()">
+    <option value="India">Indi</option>
+    <option value="USA">USA</option>
+    <option value="UK">uk</option>
+</select>
+
+<input type="submit" name="submit">
+
+</form>
+
+    <div id = "div1" onmouseover="divonmouseover()" onmouseout="divoffmouseover()">
+        The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+    </div >
+
+    <video width ="560" height ="315" controls onplay = "myFunc()" onpause=" myFunc1()" onvolumechange="myFunc2()">
+
+        <source src="C:\Users\snjku\Downloads\video.mp4" type = "video/mp4">
+
+    </video>
+
+
+
+    <script>
+        function callonload(){
+            alert("loading completed");
+        }
+        function callonresize(){
+           document.write("your resizing the screen ");
+        }
+
+        function buttonclick(){
+           var element =document.getElementById("but1");
+           element.style.backgroundColor = "green";
+        }
+
+        function divonmouseover(){
+            var ele = document.getElementById("div1");
+            ele.style.backgroundColor="pink";
+
+        }
+
+        function divoffmouseover(){
+            var eleme = document.getElementById("div1");
+            eleme.style.backgroundColor="green";
+
+        }
+        
+        function buttonmousedown(){
+            var eleme = document.getElementById("but2");
+            eleme.style.backgroundColor="red";
+
+        }
+        
+        function buttonmouseup(){
+            var elemen = document.getElementById("but2");
+            elemen.style.backgroundColor="yellow";
+
+        }
+   
+        function p1keydown(){
+            var el = document.getElementById("p1");
+            el.style.backgroundColor="green";
+
+        }
+
+        function p1keyup(){
+            var e2 = document.getElementById("p1");
+            e2.style.backgroundColor="pink";
+
+        }
+
+        function nameonfocus(){
+            var e3 = document.getElementById("name");
+            e3.style.border="2px solid green";
+        }
+
+        function nameonblur(){
+            var e3 = document.getElementById("name");
+            e3.style.border="2px solid red";
+            var pattern = /\D/g;
+            
+            var res = pattern.test(e3);
+            if(res){
+                document.write ( "Name not valid ,it contains digit");
+            }
+            else{
+                
+                document.write ( "Thank you"+e3Name);
+            }
+        }
+
+        function selectonchange(){
+            var e3 = document.getElementById("country").value;
+            console.log(e3);
+        }
+        
+        
+
+        function signupSubmit(){
+            var e3Msg = document.getElementById("msg");
+            var e3Name = document.getElementById("name").value;
+            var pattern = /\d/g;
+            
+            var res = pattern.test(e3Name);
+            if(res){
+                document.write ( "Name not valid ,it contains digit");
+            }
+            
+
+            // /[0-9]{10}/  validate mobile no
+            // [a-z A-Z 0-9 ]@[a-z A-Z ].[a-z]  - email  
+           
+            
+        
+        }
+
+
+        function myFunc(){
+            alert("This video started to play");
+        }
+
+        function myFunc1(){
+            alert("This video paused");
+        }
+
+        function myFunc2(){
+            alert("volume changed");
+        }
+
+        /*Media events
+         onplay
+         onpause
+         onwaiting
+         onvolumechange
+
+
+        */
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

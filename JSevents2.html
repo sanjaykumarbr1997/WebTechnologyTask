@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="callonload()" onresize="cllonresize()">
+
+    <button id = "b1" style="background-color: chartreuse;" onclick="bclick()">Click here</button>
+    <button id = "b2" onmousedown="buttondown()" onmouseup="buttonup()">I am button</button>
+    <input id = "i1" onkeydown = "keydown()" onkeyup ="keyup()" type="text">
+    
+    <h2 id="msg"></h2>
+    <h2>Signup</h2>
+    
+    <form onsubmit="signupSubmit()">
+        <label >Name</label>
+        <input id = "i2" type="text" onfocus = "namefocus()" onblur ="nameblur()" name = "name" >
+        <label >country</label>
+        <select  id="country" onchange="selectonchange()">
+            <option value="India">Indi</option>
+            <option value="USA">USA</option>
+            <option value="UK">uk</option>
+        
+        </select>
+
+
+    </form>
+
+    <div id = "div1" onmouseover="divonmouseover()" onmouseout="divoffmouseover()">
+        The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+    </div >
+
+    
+    <script>
+
+        function callonload(){
+            alert("loading completed");
+        }
+
+        function cllonresize(){
+            document.write("resizing is going on ");
+        }
+
+        function bclick(){
+            var ele =document.getElementById("b1");
+            ele.style.backgroundColor="red";
+
+        }
+        function buttondown(){
+            var ele =document.getElementById("b2");
+            ele.style.backgroundColor="green";
+
+        }
+        function buttonup(){
+            var ele =document.getElementById("b2");
+            ele.style.backgroundColor="red";
+
+        }
+
+        function keydown(){
+            var elem =document.getElementById("i1");
+            elem.style.backgroundColor="green";
+
+        }
+        function keyup(){
+            var eleme =document.getElementById("i1");
+            eleme.style.backgroundColor="red";
+
+        }
+
+        
+
+        function namefocus(){
+            var elemen =document.getElementById("i2");
+            elemen.style.border = "10px solid red";
+
+        }
+
+        
+        function nameblur(){
+            var elemen =document.getElementById("i2");
+            elemen.style.border = "10px solid blue";
+
+        }
+
+        function selectonchange(){
+            var elemen =document.getElementById("country").values;
+            console.log(elemen);
+
+        }
+        function signupSubmit(){
+            var e3Msg = document.getElementById("msg");
+            var e3Name = document.getElementById("i2").value;
+           document.write ( "Thank you"+e3Name);
+        
+        }
+
+        function divonmouseover(){
+            var ele = document.getElementById("div1");
+            ele.style.backgroundColor="pink";
+
+        }
+
+        function divoffmouseover(){
+            var eleme = document.getElementById("div1");
+            eleme.style.backgroundColor="green";
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

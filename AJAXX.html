@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX CALL</title>
+</head>
+<body >
+    <h1>Web Series</h1>
+    <button onclick="getWebSeries()">Get web series</button>
+    <div id ="webserieslist">
+    </div>
+    <script >
+
+        function getWebSeries(){
+
+            var htp = new XMLHttpRequest();
+       //when status changing i am calling function
+            
+            htp.onreadystatechange = function(){
+
+                if(this.readyState== 4 && this.status==200){
+                    var data = this.responseText;
+
+                    var obj = JSON.parse(data);
+
+                    //console.log(data);
+                    var divElement = document.getElementById("webserieslist");
+
+                    for(var i=0;i<obj.webseries.length;i++){
+
+                        
+                        var imageElement = document.createElement("img");
+                        imageElement.src = obj.webseries[i].image;
+                        imageElement.style.width = "500px";
+                        imageElement.style.height="500px";
+                        
+
+                        var name = document.createElement("p");
+                        name.innerHTML= obj.webseries[i].name;
+
+                        var typ = document.createElement("p");
+                        typ.innerHTML= obj.webseries[i].type;
+                        var rat = document.createElement("p");
+                        rat.innerHTML= obj.webseries[i].ratings;
+                        divElement.appendChild(name);
+                        divElement.appendChild(typ);
+                        divElement.appendChild(rat);
+                        divElement.appendChild(imageElement);
+                        
+                        
+                    }
+                    
+
+
+                }
+
+            };
+
+            htp.open("GET","https://raw.githubusercontent.com/sanjaykumarbr1997/WebTechnologyTask/web_tech_files/webseriesext.json",true);
+
+            htp.send();
+            
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

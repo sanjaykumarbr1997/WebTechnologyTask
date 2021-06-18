@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <div id ="div1">
+
+    </div>
+
+    <h1 id = "heading1">Document Object Model1</h1>
+
+    <h1 id = "heading2" style="color: blue">Document Object Model 2</h1>
+
+    <p class="para"> changing content of the HTML Element</p>
+    <h1 class="para">changing characteristics(attributes) of HTML elelemnts</h1>
+    <h2 class="para">changing the style of an element </h2>
+
+    <p>add new element </p>
+    <p>add content in html --(write method)</p>
+    <p>remove element in th e htm l</p>
+
+    <img id = image1 src="https://analyticsindiamag.com/wp-content/uploads/2020/10/7d744a684fe03ebc7e8de545f97739dd.jpg" >
+ 
+    <script>
+        var element=document.getElementById("heading1");
+        document.write(element);//tels only object and headings
+        document.write("<br>"+element.innerHTML);
+        
+       var content = element.innerHTML;
+        document.write("<br>"+content);
+        
+        var classElements = document.getElementsByClassName('para');
+        document.write("<br>"+classElements);//colllection of elemts
+        document.write("<br>"+classElements[1]);
+        document.write("<br>"+classElements[1].innerHTML);
+        
+        var parElements  = document.getElementsByTagName('p');
+        document.write("<br>"+parElements);
+        document.write("<br>"+parElements[0].innerHTML);
+        //notice here it doesn t care tag or class, it takes whichever p tag is firs t
+
+        //till now we saw getting htm l content 
+
+        //changing content of elemetn
+       element.innerHTML = "New Content";
+        document.write("<br>"+content);
+
+        //changing attribures of html element
+        var imageElement = document.getElementById("image1");
+        document.write("<br> image element"+ imageElement );
+        document.write("<br> image element src"+imageElement.src);
+
+        var result = prompt("Enter image name cage or light");
+
+        if(result =="light"){
+            imageElement.src = "https://analyticsindiamag.com/wp-content/uploads/2020/10/7d744a684fe03ebc7e8de545f97739dd.jpg";
+        }
+        else{
+            imageElement.src = "https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg";
+
+        }
+
+
+        //styel of elemetn
+
+
+        var secondElement = document.getElementById("heading2");
+
+        document.write("<br>second element color"+secondElement.style.color);
+        //u will get value of color , u can acces the color
+
+        //lets change color
+        secondElement.style.color= "red";
+        document.write("<br> second element color"+secondElement.style.color);
+         secondElement.style.backgroundColor="yellow";
+
+         //add new element
+         //var div1 = document.createElement("div");
+         //div1.innerHTML = "created div using dom";
+        // document.write("<br>"+div1);
+        // document.write("<br>"+div1.innerHTML);
+
+        
+        var div1Element = document.getElementById("div1");
+        
+        var ptag = document.createElement("p");
+        ptag.innerHTML = "adding conternt using dom into p"
+        div1Element.appendChild(ptag);
+        //div1Element.removeChild(ptag);
+
+        //adding content in html
+        document.write("<br>"+"adding content in html isnside dom");
+
+
+        //remove element
+        
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

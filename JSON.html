@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<h1>Car</h1>
+    <div id = "cars"></div>  -->
+    <h1>Mobiles</h1>
+    <div id = "mobi"></div>
+    <script>
+
+    var car = {
+		"name" :"audi",
+		"model":["A5","A3","A6","A4"],
+		"color":"black",
+		"price":1000000,
+                "music":true
+	  }
+/*
+     var elmnt = document.getElementById("cars");
+     elmnt.innerHTML = car.name +" "+car.color+" "+car.price +" "+car.model[2];
+
+      for(var i =0; i<car.model.length-1;i++){
+          //elmnt.innerHTML=car.color;
+          elmnt.innerHTML += car.model[i];
+      }
+       //how can u write multiple objects in json 
+      //ans .In arrays form 
+     */
+     var mobileStore = {
+            "mobile":[
+                        {"brand": "MI",
+                         "model":"POCO",
+                         "color":"white",
+                         "ram":"4gb",
+                         "rom":"16 gb",
+                         "image":"https://uswitch-mobiles-contentful.imgix.net/qhi9fkhtpbo3/54uqncacLkN3NnkfQP3cwI/e53992fae56f35d0214c99351ea57bd7/history_of_mobile_phones.jpg?w=770&h=370&fit=crop",
+                         "models":["pocof1","pocom2","pocom3pro"]
+
+                        },
+                        {"brand": "Apple",
+                         "model":"12pro",
+                         "color":"black",
+                         "ram":"6gb",
+                         "rom":"64 gb"
+
+                        },
+                        {"brand": "Samsung",
+                         "model":"S10",
+                         "color":"gold",
+                         "ram":"4gb",
+                         "rom":"16 gb"
+
+                        },
+                        {"brand": "Sony",
+                         "model":"xPEIA",
+                         "color":"RED",
+                         "ram":"2gb",
+                         "rom":"8 gb"
+
+                        }
+
+            ]
+
+
+     }
+
+        
+     var element = document.getElementById("mobi");
+     //element.innerHTML = mobileStore.mobile[0].models;
+
+     for(var i =0; i<mobileStore.mobile.length;i++){
+          
+          //element.innerHTML += mobileStore.mobile[i].brand;
+          var imageElement = document.createElement("Img");
+          imageElement.src = mobileStore.mobile[0].image;
+          element.appendChild(imageElement);
+
+
+      }
+    
+    </script>
+    
+</body>
+</html>

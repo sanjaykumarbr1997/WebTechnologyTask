@@ -1,0 +1,49 @@
+
+
+{
+    "webseries":[ 
+                 { "name": "Family Man",
+                   "release year":"2020",
+                   "type":"thriller",
+                   "ratings":"8.6",
+                   "image":"https://static.india.com/wp-content/uploads/2020/05/pjimage-18.jpg?impolicy=Medium_Resize&w=1200&h=800"
+
+
+                  },
+                  { "name": "Friends",
+                   "release year":"1994",
+                   "type":"comedy",
+                   "ratings":"9.6",
+                   "image": "https://m.media-amazon.com/images/M/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg"
+
+
+                  },
+                  { "name": "Big Bang theory",
+                   "release year":"2005",
+                   "type":"comedy",
+                   "ratings":"9.1",
+                   "image": "https://images-na.ssl-images-amazon.com/images/G/01/digital/video/hero/TVSeries/BigBangTheory_4926700-BIGBANGTHEORY._V392937828_SX1080_.jpg"
+
+
+                  },
+                  { "name": "Young Sheldon",
+                   "release year":"2014",
+                   "type":"comedy",
+                   "ratings":"8.7",
+                   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-COFBcKxvmdaMN7tluaz6lnviZJdC1Y0a5w&usqp=CAU"
+
+
+                  },
+                  { "name": "Dark",
+                   "release year":"2020",
+                   "type":"thriller",
+                   "ratings":"8.9",
+                   "image": "https://i1.wp.com/thenerddaily.com/wp-content/uploads/2019/06/Dark-Season-1-Netflix-Recap-Review.jpg?fit=768%2C570&ssl=1"
+
+
+                  }
+                  
+
+    ]
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body >
+    <h1>WEBSERIES</h1>
+    <button onclick="getWebS()">Click here</button>
+
+    <div id="wsl">
+
+    </div>
+
+    <script>
+        function getWebS(){
+        var htp = new XMLHttpRequest();
+        htp.onreadystatechange = function(){
+
+            if(this.readyState ==4 && this.status==200){
+
+                var data = this.responseText;
+                var obj = JSON.parse(data);
+
+                var divEleme = document.getElementById("wsl");
+
+                for(var i=0;i<obj.webseries.lenght;i++){
+
+                    var imageEl= document.createElement("img");
+                    imageEl.src = obj.webseries[i].image;
+                    imageE1.style.width = "500px";
+                    imageE1.style.height= "500px";
+
+                    var nm = document.createElement("p");
+                    nm.innerHTML = obj.webseries[i].name;
+                    divEleme.appendChild(nm);
+                    divEleme.appendChild(imageEl);
+                }
+
+            }
+        };
+        htp.open("GET","https://raw.githubusercontent.com/sanjaykumarbr1997/WebTechnologyTask/web_tech_files/webseriesext.json",true);
+        htp.send();
+
+    }
+
+
+    </script>
+
+    
+</body>
+</html>

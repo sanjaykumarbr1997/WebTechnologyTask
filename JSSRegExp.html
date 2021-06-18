@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "Because of new  g g g f computing technologies,new computing machine learning today is not like machine learning of the past. It was born from pattern recognition and the theory that computers can learn without being programmed to perform specific tasks; researchers interested in artificial intelligence wanted to see if computers could learn from data. ";
+        var pattern = /recognition/;
+        var index = str.search(pattern);
+        document.write("recognition found at :" +index);
+        
+        var pattern2 = /new/;
+        var newstring = str.replace(pattern2,"latest");
+         //changes only one pattern that is found first, 
+         document.write("<br>"+newstring);
+        
+        var pattern3 = /computing/g;
+        //every word that matches is changed
+        var newstring1 = str.replace(pattern3,"comput");
+        document.write("<br>"+newstring1);
+        
+        //var pattern4 = /computing/g;
+        //var matche = pattern4.matches(str);
+        //document.write("<br> matches"+matche);
+        
+        //returns index that match pattern
+        //if not match null
+        var pattern5 = /computing/g;
+        var matche = pattern5.exec(str);
+        document.write("<br> matches"+matche);
+
+        //returns boolean value
+        var pattern5 = /asaaad/g;
+        var res = pattern5.test(str);
+        document.write("<br> matches res"+res);
+
+        //to ignore case sensitive use i
+        var pattern6 = /because/i;
+        var res1 = pattern6.test(str);
+        document.write("<br> matches res1"+res1);
+
+        //[] denotes when searching for particular char or range
+       //gives true or false
+        var pattern7 = /[gggf]/;
+        var res2 = pattern7.test(str);
+        document.write("<br>  pattern 7 matches res2 "+res2);
+
+
+      
+        //not 
+        var str2 = "1453235";
+        var pattern9 = /[^0-9]/;
+        var res4 = pattern9.test(str2);
+        document.write("<br>  pattern 9 matches res4 "+res4);
+ 
+        //is digit available //[0-9]-\d  ,[^0-9] -\D , 
+        //[a-z A-Z 0-9] -\w   , [@-]
+         var pattern10 = /\D/;
+        var res5 = pattern10.test(str2);
+        document.write("<br>  pattern 10 matches res5 "+res5);
+
+        var str2 = "14532@35";
+        var pattern11 = /[@-_\.]/; 
+        // \. to find dot only  ,  \s any space availabe
+        var res6 = pattern11.test(str2);
+        document.write("<br>  pattern 11 matches res6 "+res6);
+
+        var str3 = "1453  2@35";
+        var pattern12 = /[\s]/; 
+        //   \s any space availabe , \t any tabspace available
+        var res7 = pattern12.test(str3);
+        document.write("<br>  pattern 12 matches res7 "+res7);
+      
+        //check internet
+        var pattern13 = /[a]/g;   //[a+] //a*/g
+        var res8 = str.match(pattern13);
+        document.write("<br>  pattern 13 matches res8 "+res8);
+
+        //return all values that matches i,e a repeated 3 times
+        var pattern14 = /a{5}/g;
+        var res9 = pattern14.test(str);
+        document.write("<br>  pattern 14 matches res9 "+res9);
+
+        //returns word ending with z ,[] word by word
+        var pattern15 = /[z$]/g;
+        var res10 = pattern15.test(str);
+        document.write("<br>  pattern 15 matches res10 "+res10);
+        
+
+        //starts with try 
+        
+        //[] word by word , /a/ sequence
+
+    
+
+    </script>
+    
+</body>
+</html>
